@@ -7,7 +7,7 @@ First, make sure you have `Chrome` installed on your machine
 Second, make sure you have `python3`. You can use this installation guide if you don't have python3: https://realpython.com/installing-python/
 
 Third, clone this repo somewhere on your local system. Cd into your repo and then
-run `python3 -m venv /path/to/new/virtual/environment`
+run `python3 -m venv env`
 
 Fourth, activate your virtual environment by running `source env/bin/activate`
 
