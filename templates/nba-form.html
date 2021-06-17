@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<style>
+.main-section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Staatliches', cursive;
+}
+
+#predictions-section {
+  margin: 15px;
+  border: 2px solid white;
+  text-align: left;
+}
+
+.text-in-predictions-section {
+  margin: 15px;
+}
+</style>
+<body>
+
+<div class="main-section">
+  <h1>NBA Predictor</h1>
+    <form method="POST">
+        <p>Under Construction, will be ready soon</p>
+        <!-- <input name="text" placeholder="Week to predict (e.g 10)">
+        <input type="submit"> -->
+        <br>
+        <div id="predictions-section">
+          <div class="text-in-predictions-section">
+            <h2>{{ subtitle }}</h2>
+            {% for result in results %}
+                {{ result }}<br>
+            {% endfor %}
+            <h2>{{ percent_correct }}</h2>
+          </div>
+        </div>
+        {% if results %}
+        <script>
+          document.getElementById("predictions-section").style.borderColor = "black";
+        </script>
+        {% endif %}
+    </form>
+    <p><a href="./">Home</a></p>
+</div>
+
+</body>
+</html>

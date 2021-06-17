@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<style>
+.main-section {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Staatliches', cursive;
+}
+
+#predictions-section {
+  margin: 15px;
+  border: 2px solid white;
+  text-align: left;
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.text-in-predictions-section {
+  margin: 15px;
+}
+</style>
+<body>
+
+<div class="main-section">
+  <h1>NFL Predictor</h1>
+    <form method="POST">
+        <input type="number" name="season_year_start" placeholder="Season year start" min="2015" max="2021">
+        <input type="number" name="text" placeholder="Week to Predict" min="2" max="16">
+        <input type="submit">
+        <br>
+        <div id="predictions-section">
+          <div class="text-in-predictions-section">
+            <h2>{{ subtitle }}</h2>
+            {% for result in results %}
+                {{ result }}<br>
+            {% endfor %}
+            <h2>{{ percent_correct }}</h2>
+          </div>
+        </div>
+        {% if results %}
+        <script>
+          document.getElementById("predictions-section").style.borderColor = "black";
+        </script>
+        {% endif %}
+    </form>
+    <p><a href="/">Home</a></p>
+</div>
+
+</body>
+</html>
