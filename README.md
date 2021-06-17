@@ -20,13 +20,13 @@ Run `python3 application.py`
 
 Search for http://127.0.0.1:5000/ in your browser. You should see the application's home page
 
-# Predicting NFL weeks
+# Predicting NFL games
 From the home page of the application, you should click the NFL link.
 
 Then, type the year (e.g if you wanted to predict games from a week in the 2020-2021
 season, then type 2020).
 
-Then, type the week that you would like to predict. If you have already run this
+Then, type the week of games that you would like to predict. If you have already run this
 prediction, your results should be stored locally in a csv file with a name that specifies the
 year you predicted, the time it was run, and the week you predicted.
 
