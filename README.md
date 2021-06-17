@@ -6,22 +6,21 @@ First, make sure you have `Chrome` installed on your machine
 
 Second, make sure you have `python3`. You can use this installation guide if you don't have python3: https://realpython.com/installing-python/
 
-Third, clone this repo somewhere on your local system
+Third, clone this repo somewhere on your local system. Cd into your repo and then
+run `python3 -m venv /path/to/new/virtual/environment`
 
-Cd into your repo and then run `python3 -m venv /path/to/new/virtual/environment`
+Fourth, activate your virtual environment by running `source env/bin/activate`
 
-Activate your virtual environment by running `source env/bin/activate`
-
-Run `python3 -m pip install -r requirements.txt`
+Finally, run `python3 -m pip install -r requirements.txt`
 
 # Using the application
 Activate your virtual environment by doing `source env/bin/activate`
 
 Run `python3 application.py`
 
-Search for http://127.0.0.1:5000/ in your browser
+Search for http://127.0.0.1:5000/ in your browser. You should see the application's home page
 
-# Predicting NFl weeks
+# Predicting NFL weeks
 From the home page of the application, you should click the NFL link.
 
 Then, type the year (e.g if you wanted to predict games from a week in the 2020-2021
