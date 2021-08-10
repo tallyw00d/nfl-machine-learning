@@ -49,7 +49,7 @@ def my_nfl_form_post():
 
     # If we didn't get any predictions, then that means there was no training data to use (the season likely hasn't started yet)
     if (len(predictions_df) == 0):
-        str_return.append("Cannot predict anything because there is no data for the " + str(season_year_start_input) + "-" + str(season_year_start_input+1) + " season yet. Please wait until week 1 has started.")
+        str_return.append("Cannot predict anything because there is no data within the prior 1-5 weeks of the week you are trying to predict for the " + str(season_year_start_input) + "-" + str(season_year_start_input+1) + " season yet.")
         return render_template('nfl-form.html', results=str_return, subtitle="Cannot make predictions", percent_correct = "Percent Correct: 0%")
 
     # predictions_arr is the array of prediction values (string predictions)
