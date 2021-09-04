@@ -1,0 +1,37 @@
+on:
+  github:
+    branches:
+      only: main
+      
+jobs:
+  CloneRepo:
+    resources:
+      instance-type: C3
+    outputs:
+     output-1:
+        type: volume
+    uses: git-checkout@v1
+    with:
+      url: context.event.github.url
+      ref: context.event.github.ref
+  NFL:
+    env:
+      PYTHONUNBUFFERED: "1"
+    resources:
+      instance-type: P5000
+    needs:
+      - CloneRepo
+    inputs:
+      input-1: CloneRepo.outputs.output-1
+    outputs:
+      output-1:
+        type: dataset
+        with:
+          ref: dstadsxw8ver1pm
+    uses: script@v1
+    with:
+      script: |-
+        cd /inputs/input-1
+        pip install -r requirements.txt
+        python application.py
+      image: pytorch/pytorch:latest
