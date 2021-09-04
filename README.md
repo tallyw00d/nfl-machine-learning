@@ -1,4 +1,4 @@
-# nfl-machine-learning
+# nfl-machine-learning tal
 This application uses a machine learning algorithm to predict the outcomes of past and upcoming NFL games. Even if the games you are trying to predict have already occurred (e.g week 10 of the 2017-2018 season), the algorithm will only use data from the 1-5 weeks prior to the games you are predicting. Regarding future games, as long as there is at least one week's worth of data in that season within 1-5 weeks prior to the week you're trying to predict, then the algorithm will be able to run. The results of the prediction will be displayed on your browser and saved to a CSV file. This project was not meant for gambling, but rather, to see if a machine learning algorithm could determine what statistics are useful for analysis without actually knowing what those data points represent. 
 
 # Environment Setup
